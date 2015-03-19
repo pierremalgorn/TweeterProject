@@ -28,11 +28,11 @@ body {
 .namePoster {
     font-weight: bold;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
 }
 
 .messagePoster{
-	margin-bottom: 13px;
+	margin-bottom: 18px;
 }
 
 .reply{
