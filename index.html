@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html ng-app="AngJS">
     <head>
         <title>GrosClientTweeterTasVu</title>
@@ -39,7 +35,7 @@ and open the template in the editor.
                         <input type="text" class="form-control" id="message" placeholder="Message" ng-model="currentTweet.message">
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary" id="button_tweet" ng-click="sendTweet()">Tweet</button>
+                        <button type="button" class="btn btn-primary" id="button_tweet" onclick="message.value=''" ng-click="sendTweet();">Tweet</button>
                     </div>
                 </form>   
             </div>
@@ -49,10 +45,14 @@ and open the template in the editor.
                         <img src="{{getImgLink(tweet.authorEmailHash)}}">   
                     </div>
                     <div class="col-md-10 infos_tweet">
-                        <div class="namePoster">{{tweet.authorName}}</div>
-                        <div class="messagePoster">{{tweet.message}}</div>
-                        <p class="reply">Reply</p>
-                        <p>{{ tweet.timestamps }}</p>
+                        <div class="row">
+                            <div class="namePoster">{{tweet.authorName}}</div>
+                            <div class="messagePoster">{{tweet.message}}</div>
+                        </div>
+                        <div class="row">
+                            <a href="#" class="reply">Reply</a>
+                            <div class="time">{{tweet.date | ago}}</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -61,8 +61,10 @@ and open the template in the editor.
     <script src="libs/jquery.min.js"></script>
     <script src="libs/bootstrap.min.js"></script>
     <script src="libs/angular.min.js"></script>
+    <script src="scripts/momentjs.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/MainCtrl.js"></script>
+    
         
     </body>
 </html>

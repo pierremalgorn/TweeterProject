@@ -37,6 +37,14 @@ body {
 
 .reply{
 	color : grey;
+        float: left;
+        margin-left: 10px;
+}
+
+.time{
+    color: grey;
+    float:right;
+    margin-right: 10px;
 }
 
 .infos_tweet{
