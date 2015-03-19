@@ -1,17 +1,21 @@
-@media (max-width : 1170px) {
-    body {
+@media (max-width : 2000px) {
+    header {
+    	height: 170px;
         background-image: url(../header_lg.jpg); 
+    }
+    body {
+    	background-color: black;
     }
 }
 
 @media (max-width : 970px) {
-    body {
+    header {
         background-image: url(../header_md.jpg); 
     }
 }
 
 @media (max-width : 768px) {
-    body {
+    header {
         background-image: url(../header_xs.jpg); 
     }
 }
