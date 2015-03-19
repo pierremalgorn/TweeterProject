@@ -25,15 +25,23 @@ and open the template in the editor.
                 
             </div>
             <div class="row" ng-show="tweets">
-                <div class="row" ng-repeat="tweet in tweets">
+                <div class="row" ng-repeat="tweet in tweets | orderBy: date">
                     <div class="col-md-2">
                         TODO image
                     </div>
                     <div class="col-md-10">
+                        <div class="namePoster">{{tweet.authorName}}</div>
                         {{tweet.message}}
                     </div>
                 </div>
             </div>
         </div>
+        
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/bootstrap.min.js"></script>
+    <script src="libs/angular.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/MainCtrl.js"></script>
+        
     </body>
 </html>

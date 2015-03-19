@@ -1,14 +1,9 @@
 AngJS.controller('MainCtrl', function($scope, $http){
-    $scope.search = "Bidule";
     $scope.tweets = [];
+    $scope.currentTweet;
     
     $scope.selectUser = function(toto) {
         $scope.currentUser = toto;
-    }
-    
-    $scope.ordering = {
-        'field' : 'name',
-        'reverse' : false
     }
     
 //    $scope.selectOrderingField = function(column) {
@@ -20,17 +15,24 @@ AngJS.controller('MainCtrl', function($scope, $http){
         //}
        // $scope.ordering.field = column;
     //}
+    
+    $scope.sendTweet = function() {
+        $http.post('http://54.93.114.212/tweets', {authorEmail: currentTweet.email, authorName: currentTweet.name, message: currentTweet.message})
+            .success(function(data){
+                 $scope.tweets = data;
+        })
+            .error(function(data){
+                 $scope.tweets = data;
+        })
+    }
 
 
-    $http.get('54.93.114.212')
+    $http.get('http://54.93.114.212/tweets')
         .success(function(data){
              $scope.tweets = data;
-
     })
         .error(function(data){
-
-                    // Gestion d’erreur
-
+             $scope.tweets = data;
     })
 
 });
