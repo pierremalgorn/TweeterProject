@@ -40,7 +40,7 @@
                 </form>   
             </div>
             <div class="row" ng-show="tweets">
-                <div class="row" id="messages" ng-repeat="tweet in tweets | orderBy: 'date' : true">
+                <div class="row" id="messages" ng-repeat="tweet in tweets | orderBy: 'date' : true" ng-class="{'activer': <condition>}">
                     <div class="col-md-2">
                         <img src="{{getImgLink(tweet.authorEmailHash)}}">   
                     </div>
