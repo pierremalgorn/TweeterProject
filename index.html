@@ -15,7 +15,20 @@ and open the template in the editor.
         <link href="styles/main.css" rel="stylesheet">
     </head>
     <body ng-controller="MainCtrl">
-        <div class="row"></div>
-        
+        <div class="col-md-6 col-md-offset-3">
+            <div class="row">
+                
+            </div>
+            <div class="row" ng-show="tweets">
+                <div class="row" ng-repeat="tweet in tweets">
+                    <div class="col-md-2">
+                        TODO image
+                    </div>
+                    <div class="col-md-10">
+                        {{tweet.message}}
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
