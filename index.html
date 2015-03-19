@@ -44,11 +44,11 @@ and open the template in the editor.
                 </form>   
             </div>
             <div class="row" ng-show="tweets">
-                <div class="row" id="messages" ng-repeat="tweet in tweets | orderBy: date">
+                <div class="row" id="messages" ng-repeat="tweet in tweets | orderBy: 'date' : true">
                     <div class="col-md-2">
-                        <img src="http://www.gravatar.com/avatar/"+{{tweet.hash}}>   
+                        <img src="{{getImgLink(tweet.authorEmailHash)}}">   
                     </div>
-                    <div class="infos_tweet">
+                    <div class="col-md-10 infos_tweet">
                         <div class="namePoster">{{tweet.authorName}}</div>
                         <div class="messagePoster">{{tweet.message}}</div>
                         <p class="reply">Reply</p>
