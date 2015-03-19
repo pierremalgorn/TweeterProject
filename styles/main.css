@@ -1,13 +1,10 @@
 
-.namePoster {
-    font-weight: bold;
-    width: 100%;
 
 body {
 	background-color: black;
 }
 
-#input, #tweet{
+#input, #tweet, #messages{
 	background-color: white;
 	border-radius: 10px;
 	margin-top: 30px;
@@ -22,6 +19,26 @@ body {
 #button_tweet{
 	float : right;
 
+}
+
+
+.namePoster {
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.messagePoster{
+	margin-bottom: 13px;
+}
+
+.reply{
+	color : grey;
+}
+
+.infos_tweet{
+	float : left;
+	padding-left: 10px;
 }
 
 @media (max-width : 2000px) {

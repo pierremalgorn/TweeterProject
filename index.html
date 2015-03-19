@@ -44,13 +44,14 @@ and open the template in the editor.
                 </form>   
             </div>
             <div class="row" ng-show="tweets">
-                <div class="row" ng-repeat="tweet in tweets | orderBy: date">
+                <div class="row" id="messages" ng-repeat="tweet in tweets | orderBy: date">
                     <div class="col-md-2">
-                        TODO image
+                        <img src="http://www.gravatar.com/avatar/"+{{tweet.hash}}>   
                     </div>
-                    <div class="col-md-10">
+                    <div class="infos_tweet">
                         <div class="namePoster">{{tweet.authorName}}</div>
-                        {{tweet.message}}
+                        <div class="messagePoster">{{tweet.message}}</div>
+                        <p class="reply">Reply</p>
                     </div>
                 </div>
             </div>
