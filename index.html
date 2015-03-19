@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html ng-app="AngJS">
     <head>
-        <title>TODO supply a title</title>
+        <title>GrosClientTweeterTasVu</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -25,21 +25,21 @@ and open the template in the editor.
                 <form>
                     <div class="form-group">
                         <label for="exampleInputName2">Name</label>
-                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Name">
+                        <input type="text" class="form-control" id="exampleInputName2" placeholder="Name" ng-model="currentTweet.name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail2">Email</label>
-                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email">
+                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email" ng-model="currentTweet.email">
                     </div>
                 </form>   
             </div>
             <div class="row" id="tweet">
                 <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="message" placeholder="Message">
+                        <input type="text" class="form-control" id="message" placeholder="Message" ng-model="currentTweet.message">
                     </div>
                     <div class="form-group">
-                        <button type="button" class="btn btn-primary" id="button_tweet">Tweet</button>
+                        <button type="button" class="btn btn-primary" id="button_tweet" ng-click="sendTweet()">Tweet</button>
                     </div>
                 </form>   
             </div>

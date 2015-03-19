@@ -1,4 +1,7 @@
-
+.namePoster {
+    font-weight: bold;
+    width: 100%;
+}
 
 body {
 	background-color: black;
